@@ -21,7 +21,7 @@ from pyrogram.handlers import MessageHandler
 from pyshorteners import Shortener
 
 OPEN_URL_API = os.environ.get("OPEN_URL_API", "87855078f16e4cb79931428f7efd9454a4767ef7")
-CUTTLY_API = os.environ.get("CUTTLY_API", "f64dffbde033b6c307387dd50b7c76e505f1c")
+URLOPEN_API = os.environ.get("URLOPEN_API", "87855078f16e4cb79931428f7efd9454a4767ef7")
 SHORTCM_API = os.environ.get("SHORTCM_API", "pk_...NIZv")
 GPLINKS_API = os.environ.get("GPLINKS_API", "008ccaedd6061ad1948838f410947603de9007a7")
 
@@ -78,13 +78,13 @@ async def short(link):
         except Exception as error:
             print(f"urlsopen.com error :- {error}")
     
-    # Chilp.it shorten
+    # UrlsOpen.com shorten
     try:
         s = Shortener()
-        url = s.chilpit.short(link)
-        shorten_urls += f"\n**Chilp.it :-** {url}"
+        url = s.urlsopen.short(link)
+        shorten_urls += f"\n**urlsopen.com :-** {url}"
     except Exception as error:
-        print(f"Chilp.it error :- {error}")
+        print(f"urlsopen.com error :- {error}")
     
     # Clck.ru shorten
     try:
