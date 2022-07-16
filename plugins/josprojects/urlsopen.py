@@ -21,7 +21,7 @@ from pyrogram import Client, filters
 API_ID = environ.get('8967766')
 API_HASH = environ.get('505dc1f394f59c8a55b1aa798a0715f9')
 BOT_TOKEN = environ.get('5071513445:AAHu03aJqQ2728J6RbYFF23JlYXG3JtYa0g')
-API_KEY = environ.get('API_KEY', 'e3eddb3e7c5513eee187120fce788ddc4a1a643b')
+API_KEY = environ.get('87855078f16e4cb79931428f7efd9454a4767ef7')
 
 bot = Client('droplink bot',
              api_id=API_ID,
@@ -35,7 +35,7 @@ bot = Client('droplink bot',
 async def start(bot, message):
     await message.reply(
         f"**Hi {message.chat.first_name}!**\n\n"
-        "I'm a specialised bot for shortening Droplink.co links which can help you earn money by just sharing links. Made by <a href=\"https://github.com/dakshy\">ToonsHub</a>.")
+        "I'm a specialised bot for shortening links which can help you earn money by just sharing links. Made by <a href=\">ToonsHub</a>.")
 
 
 @bot.on_message(filters.regex(r'https?://[^\s]+') & filters.private)
@@ -51,7 +51,7 @@ async def link_handler(bot, message):
 
 
 async def get_shortlink(link):
-    url = 'https://droplink.co/api'
+    url = 'https://shorturllink.in/api'
     params = {'api': API_KEY, 'url': link}
 
     async with aiohttp.ClientSession() as session:
