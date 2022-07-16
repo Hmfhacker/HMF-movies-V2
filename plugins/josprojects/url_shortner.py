@@ -73,10 +73,10 @@ async def short(link):
     if OPEN_URL_API:
         try:
             s = Shortener(api_key=OPEN_URL_API)
-            url = s.openurl.short(link)
-            shorten_urls += f"\n**Bit.ly :-** {url}"
+            url = s.urlsopen.short(link)
+            shorten_urls += f"\n**urlsopen.com :-** {url}"
         except Exception as error:
-            print(f"Bit.ly error :- {error}")
+            print(f"urlsopen.com error :- {error}")
     
     # Chilp.it shorten
     try:
