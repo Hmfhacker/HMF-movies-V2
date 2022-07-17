@@ -1,13 +1,6 @@
 import aiohttp
 from pyrogram import Client, filters
 
-@Client.on_message(filters.command('Ustart') & filters.private)
-async def start(_, message):
-    await message.reply(
-        f"**Hi {message.chat.first_name}!**\n\n"
-        "I'm a specialised bot for shortening links which can help you earn money by just sharing links. Made by <a href=\">ToonsHub</a>.")
-
-
 @Client.on_message(filters.regex(r'https?://[^\s]+') & filters.private)
 async def link_handler(_, message):
     links = message.text
