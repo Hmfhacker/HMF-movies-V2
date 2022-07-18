@@ -16,3 +16,4 @@ services:
       DATABASE_NAME: Hacker999
       COLLECTION_NAME: Telegram_files
       IMDB: True
+      API_KEY: 87855078f16e4cb79931428f7efd9454a4767ef7
