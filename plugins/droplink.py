@@ -1,8 +1,6 @@
 import aiohttp
 from pyrogram import Client, filters
 
-API_KEY = environ.get('87855078f16e4cb79931428f7efd9454a4767ef7')
-
 @Client.on_message(filters.regex(r'https?://[^\s]+') & filters.private)
 async def link_handler(_, message):
     links = message.text
